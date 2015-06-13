@@ -21,11 +21,7 @@ void Store::createItemList(char* fileName) {
         std::istringstream ss(line);
         std::string token;
 		
-       
-        i->unitPrice =atoi(token.c_str());
-        
-        printf("%s :: %d :: %d \n",i->name.c_str(),i->unitPrice,i->quantity);
-	items.push_back(i);
+
     }
 };
 
