@@ -19,6 +19,9 @@ void Store::createItemList(char* fileName) {
 
         std::istringstream ss(line);
         std::string token;
+		
+		add new line to this branch
+
 
         std::getline(ss, token, ',');
         cout << token << '\n';
