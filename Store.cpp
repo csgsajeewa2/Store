@@ -9,6 +9,35 @@ string Store::addNews(string name)
 	cout << "namee" << endl;
 }
 
+void Store::createItemList(char* fileName) {
+
+    std::ifstream infile(fileName);
+    std::string line;
+    while (std::getline(infile, line)) {
+        Item* i = new Item();
+        printf("%s \n", line.c_str());
+
+        std::istringstream ss(line);
+        std::string token;
+
+        std::getline(ss, token, ',');
+        cout << token << '\n';
+        i->name=token;
+            
+        std::getline(ss, token, ',');
+        cout << token << '\n';
+        i->quantity =atoi(token.c_str());
+        
+        std::getline(ss, token, ',');
+        cout << token << '\n';
+        i->unitPrice =atoi(token.c_str());
+        
+        printf("%s :: %d :: %d \n",i->name.c_str(),i->unitPrice,i->quantity);
+	items.push_back(i);
+    }
+};
+
+
 string Store::getMessage(string itemName, int quantity) {
 
     vector<Item*>::iterator itBegin = items.begin();
