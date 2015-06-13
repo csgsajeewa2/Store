@@ -5,7 +5,7 @@ class SocketCallBack {
 public:
     SocketCallBack();
     SocketCallBack(const SocketCallBack& orig);
-    virtual ~SocketCallBack();
+
 private:
 
 };

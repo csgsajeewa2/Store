@@ -8,8 +8,6 @@ int main(int argc, char** argv) {
     }
     char* port = argv[1];
     char* fileName = argv[2];
-    Store* s= new Store();
-    s->start(port,fileName);
     return 0;
 
 }
