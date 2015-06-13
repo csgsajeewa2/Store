@@ -23,10 +23,7 @@ void Store::createItemList(char* fileName) {
         std::getline(ss, token, ',');
         cout << token << '\n';
         i->name=token;
-            
-        std::getline(ss, token, ',');
-        cout << token << '\n';
-        i->quantity =atoi(token.c_str());
+         
         
         std::getline(ss, token, ',');
         cout << token << '\n';
