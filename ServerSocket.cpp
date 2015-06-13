@@ -51,15 +51,6 @@ int ServerSocket::run() {
         std::cout << "unable to listen at that port"<< std::endl;
         return -1;
     }
-
-    struct sockaddr_storage peeraddr; 
-    socklen_t addr_size;
-   
-    int peer = accept(serverSocketId, (struct sockaddr*) &peeraddr, &addr_size);
-    if (peer == -1) {
-        std::cout << "unable to accept at that port" << std::endl;
-        return -1;
-    }
     std::cout << "connection received" << std::endl;
     socketId = peer;
     return 0;
