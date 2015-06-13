@@ -17,8 +17,10 @@ void Store::createItemList(char* fileName) {
         Item* i = new Item();
         printf("%s \n", line.c_str());
 
-      
 
+        std::istringstream ss(line);
+        std::string token;
+		
         std::getline(ss, token, ',');
         cout << token << '\n';
         i->name=token;
