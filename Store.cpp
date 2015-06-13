@@ -6,7 +6,7 @@
 //create items from xml and 
 string Store::addNews(string name)
 {
-	cout << "name" << endl;
+	cout << "namee" << endl;
 }
 
 string Store::getMessage(string itemName, int quantity) {
